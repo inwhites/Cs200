@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/new/background">
+        <file>resource/connect.png</file>
+        <file>resource/disconnect.png</file>
+        <file>resource/background.jpg</file>
+        <file>resource/start.png</file>
+        <file>resource/clear.png</file>
+        <file>resource/save.png</file>
+        <file>resource/cancel.png</file>
+        <file>resource/set.png</file>
+        <file>resource/record.png</file>
+        <file>resource/search.png</file>
+        <file>resource/open.png</file>
+        <file>resource/reset.png</file>
+        <file>resource/close.png</file>
+    </qresource>
+</RCC>
