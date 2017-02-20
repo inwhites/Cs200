@@ -370,13 +370,13 @@ void MainWindow::progress_display(){
 
     }
 
-    ui->clear->setEnabled(true);
-    ui->exportExcel->setEnabled(true);
+     ui->clear->setEnabled(true);
+     ui->exportExcel->setEnabled(true);
      ui->isconnected->setEnabled(true);
      ui->times->setEnabled(true);
      ui->speed->setEnabled(true);
      ui->measure->setStyleSheet("background-image: url(:/new/background/resource/start.png);");
-    cancelFlag = !cancelFlag;
+     cancelFlag = !cancelFlag;
 
 }
 
