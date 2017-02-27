@@ -122,24 +122,27 @@ void MainWindow::write_serial() //写串口
 
 void MainWindow::x_chg() //x位置改变
 {
-    pulse_cnt = ui->XScrollBar->value()-x_coor;
-    if(pulse_cnt > 0){ //生成发送字符
-        pulse_str = "x+" + QString::number(pulse_cnt);
-    }else if (pulse_cnt < 0){
-        pulse_str = "x-" + QString::number((0-pulse_cnt));
+    if(break_loop)
+        return;
+    Xpulse_cnt = (ui->XScrollBar->value()-x_coor)*10;
+    if(Xpulse_cnt > 0){ //生成发送字符
+        Xpulse_str = "X+" + QString::number(Xpulse_cnt);
+    }else if (Xpulse_cnt < 0){
+        Xpulse_str = "X-" + QString::number((0-Xpulse_cnt));
     }else
         return;
 
-    qDebug()<<pulse_str;
-
-    if(serial->write(pulse_str.toLatin1()) != -1){ //串口是否写成功
-        qDebug()<< "x串口写成功";
-        x_coor = ui->XScrollBar->value();
-        x_str = QString::number(((double)x_coor)/100.0,'f',2);
-        ui->lcd_x->display(x_str);
-    }else{// 没成功scrollbar恢复原位
-        ui->XScrollBar->setValue(x_coor);
-    }
+    qDebug()<<Xpulse_str;
+    loc_flag = false;
+    loc_pos();
+//    if(serial->write(Xpulse_str.toLatin1()) != -1){ //串口是否写成功
+//        qDebug()<< "x串口写成功";
+//        x_coor = ui->XScrollBar->value();
+//        x_str = QString::number(((double)x_coor)/100.0,'f',2);
+//        ui->lcd_x->display(x_str);
+//    }else{// 没成功scrollbar恢复原位
+//        ui->XScrollBar->setValue(x_coor);
+//    }
 
 
 
@@ -147,48 +150,58 @@ void MainWindow::x_chg() //x位置改变
 
 void MainWindow::y_chg()//y位置改变
 {
-    pulse_cnt = ui->YScrollBar->value()-y_coor;
+    if(break_loop)
+        return;
+    Ypulse_cnt = (ui->YScrollBar->value()-y_coor)*10;
 
-    if(pulse_cnt > 0){
-        pulse_str = "y+" + QString::number(pulse_cnt);
-    }else if (pulse_cnt < 0){
-        pulse_str = "y-" + QString::number((0-pulse_cnt));
+    if(Ypulse_cnt > 0){
+        Ypulse_str = "Y+" + QString::number(Ypulse_cnt);
+    }else if (Ypulse_cnt < 0){
+        Ypulse_str = "Y-" + QString::number((0-Ypulse_cnt));
     }else
         return;
 
-    qDebug()<<pulse_str;
-
-    if(serial->write(pulse_str.toLatin1()) != -1){
-        qDebug()<< "y串口写成功";
-        y_coor = ui->YScrollBar->value();
-        y_str = QString::number(((double)y_coor)/100.0,'f',2);
-        qDebug() << y_str;
-        ui->lcd_y->display(y_str);
-    }else{
-        ui->YScrollBar->setValue(y_coor);
-    }
+    qDebug()<<Ypulse_str;
+    loc_flag = false;
+    loc_pos();
+//    if(serial->write(Ypulse_str.toLatin1()) != -1){
+//        qDebug()<< "y串口写成功";
+//        y_coor = ui->YScrollBar->value();
+//        y_str = QString::number(((double)y_coor)/100.0,'f',2);
+//        qDebug() << y_str;
+//        ui->lcd_y->display(y_str);
+//    }else{
+//        ui->YScrollBar->setValue(y_coor);
+//    }
 }
 
 void MainWindow::z_chg()//z位置改变
+
 {
-    pulse_cnt = ui->ZScrollBar->value()-z_coor;
-    if(pulse_cnt > 0){
-        pulse_str = "z+" + QString::number(pulse_cnt);
-    }else if (pulse_cnt < 0){
-        pulse_str = "z-" + QString::number((0-pulse_cnt));
+    if(break_loop){
+
+        return;}
+
+    Zpulse_cnt = (ui->ZScrollBar->value()-z_coor)*100;
+    if(Zpulse_cnt > 0){
+        Zpulse_str = "Z+" + QString::number(Zpulse_cnt);
+    }else if (Zpulse_cnt < 0){
+        Zpulse_str = "Z-" + QString::number((0-Zpulse_cnt));
     }else
         return;
 
-    qDebug()<<pulse_str;
-    if(serial->write(pulse_str.toLatin1()) != -1){
-        qDebug()<< "z串口写成功"<<pulse_str.toLatin1();
-        z_coor = ui->ZScrollBar->value();
-        z_str = QString::number(((double)z_coor)/100.0,'f',2);
-        ui->lcd_z->display(z_str);
-    }else{
-        ui->ZScrollBar->setValue(z_coor);
-    }
-    //serial->write()
+    qDebug()<<Zpulse_str;
+    loc_flag = false;
+    loc_pos();
+//    if(serial->write(pulse_str.toLatin1()) != -1){
+//        qDebug()<< "z串口写成功"<<Zpulse_str.toLatin1();
+//        z_coor = ui->ZScrollBar->value();
+//        z_str = QString::number(((double)z_coor)/100.0,'f',2);
+//        ui->lcd_z->display(z_str);
+//    }else{
+//        ui->ZScrollBar->setValue(z_coor);
+//    }
+
 }
 
 void MainWindow::lcd_record()
@@ -199,29 +212,112 @@ void MainWindow::lcd_record()
 }
 
 void MainWindow::loc_pos()
-{
-    int x_pos = QString::number(ui->SetX->text().toDouble()*100,'f',0).toInt();
-    int y_pos = QString::number(ui->SetY->text().toDouble()*100,'f',0).toInt();
-    int z_pos = QString::number(ui->SetZ->text().toDouble()*100,'f',0).toInt();
-    if(x_pos>=0 && x_pos <=36000 &&y_pos >= 0 && y_pos <= 30000
-            && z_pos >=0 &&z_pos <= 20000){
+{   if(loc_flag){
+        int x_pos = QString::number(ui->SetX->text().toDouble()*100,'f',0).toInt();
+        int y_pos = QString::number(ui->SetY->text().toDouble()*100,'f',0).toInt();
+        int z_pos = QString::number(ui->SetZ->text().toDouble()*100,'f',0).toInt();
+        if(x_pos>=0 && x_pos <=36000 &&y_pos >= 0 && y_pos <= 30000
+                && z_pos >=0 &&z_pos <= 20000){
 
-        ui->XScrollBar->setValue(x_pos);
-        ui->YScrollBar->setValue(y_pos);
-        ui->ZScrollBar->setValue(z_pos);
+            Xpulse_cnt = (x_pos-x_coor)*10;
+            if(Xpulse_cnt > 0){ //生成发送字符
+                Xpulse_str = "X+" + QString::number(Xpulse_cnt);
+            }else if (Xpulse_cnt < 0){
+                Xpulse_str = "X-" + QString::number((0-Xpulse_cnt));
+            }else
+                 Xpulse_str = "X+0";
+
+
+            Ypulse_cnt = (y_pos-y_coor)*10;
+
+            if(Ypulse_cnt > 0){
+                Ypulse_str = "Y+" + QString::number(Ypulse_cnt);
+            }else if (Ypulse_cnt < 0){
+                Ypulse_str = "Y-" + QString::number((0-Ypulse_cnt));
+            }else
+                Ypulse_str = "Y+0";
+
+            Zpulse_cnt = (z_pos-z_coor)*100;
+            if(Zpulse_cnt > 0){
+                Zpulse_str = "Z+" + QString::number(Zpulse_cnt);
+            }else if (Zpulse_cnt < 0){
+                Zpulse_str = "Z-" + QString::number((0-Zpulse_cnt));
+            }else
+               Zpulse_str = "Z+0" ;
+
+            XYZ_str = "B"+Xpulse_str+Ypulse_str+Zpulse_str+"FF";
+
+
+            if(serial->write(XYZ_str.toLatin1()) != -1){
+                    qDebug()<< "三口写成功"<<XYZ_str.toLatin1();
+                    break_loop = true;
+                    ui->XScrollBar->setValue(x_pos);
+                    ui->YScrollBar->setValue(y_pos);
+                    ui->ZScrollBar->setValue(z_pos);
+
+                    break_loop = false;
+                    x_coor = ui->XScrollBar->value();
+                    y_coor = ui->YScrollBar->value();
+                    z_coor = ui->ZScrollBar->value();
+
+                    x_str = QString::number(((double)x_coor)/100.0,'f',2);
+                    ui->lcd_x->display(x_str);
+                    y_str = QString::number(((double)y_coor)/100.0,'f',2);
+                    ui->lcd_y->display(y_str);
+                    z_str = QString::number(((double)z_coor)/100.0,'f',2);
+                    ui->lcd_z->display(z_str);
+               }else{QMessageBox::critical(this,"Critical Error",
+                                           "Serial Error "
+                                          ,QMessageBox::Ok);
+
+            }
+
+        }else{
+            QMessageBox::critical(this,"Critical Error",
+                                   "Set data error "
+                                  ,QMessageBox::Ok);
+        }
+
     }else{
-        QMessageBox::critical(this,"Critical Error",
-                               "Set data error "
-                              ,QMessageBox::Ok);
+        XYZ_str = "B"+Xpulse_str+Ypulse_str+Zpulse_str+"FF";
+
+        if(serial->write(XYZ_str.toLatin1()) != -1){
+                qDebug()<< "单口写成功"<<XYZ_str.toLatin1();
+                x_coor = ui->XScrollBar->value();
+                y_coor = ui->YScrollBar->value();
+                z_coor = ui->ZScrollBar->value();
+
+                x_str = QString::number(((double)x_coor)/100.0,'f',2);
+                ui->lcd_x->display(x_str);
+                y_str = QString::number(((double)y_coor)/100.0,'f',2);
+                ui->lcd_y->display(y_str);
+                z_str = QString::number(((double)z_coor)/100.0,'f',2);
+                ui->lcd_z->display(z_str);
+           }else{
+                break_loop = true;
+                ui->XScrollBar->setValue(x_coor);
+                ui->YScrollBar->setValue(y_coor);
+                ui->ZScrollBar->setValue(z_coor);
+                break_loop = false;
+            }
+
+
+
     }
+    Xpulse_str = "X+0";
+    Ypulse_str = "Y+0";
+    Zpulse_str = "Z+0";
+    loc_flag = true;
+
 
 }
 
 void MainWindow::reset()
 {
-    ui->XScrollBar->setValue(0);
-    ui->YScrollBar->setValue(0);
-    ui->ZScrollBar->setValue(0);
+    ui->SetX->setText("0");
+    ui->SetY->setText("0");
+    ui->SetZ->setText("0");
+    loc_pos();
 }
 
 

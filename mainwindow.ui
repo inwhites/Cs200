@@ -1836,7 +1836,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <rect>
        <x>10</x>
        <y>250</y>
-       <width>41</width>
+       <width>45</width>
        <height>21</height>
       </rect>
      </property>
@@ -1847,7 +1847,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <enum>QFrame::Sunken</enum>
      </property>
      <property name="text">
-      <string>Z轴</string>
+      <string>Z轴/mm</string>
      </property>
     </widget>
     <widget class="QScrollBar" name="ZScrollBar">
@@ -1999,7 +1999,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <rect>
        <x>10</x>
        <y>220</y>
-       <width>41</width>
+       <width>45</width>
        <height>21</height>
       </rect>
      </property>
@@ -2010,7 +2010,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <enum>QFrame::Sunken</enum>
      </property>
      <property name="text">
-      <string>Y轴</string>
+      <string>Y轴/mm</string>
      </property>
     </widget>
     <widget class="QLCDNumber" name="lcd_x">
@@ -2074,7 +2074,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <rect>
        <x>10</x>
        <y>190</y>
-       <width>41</width>
+       <width>45</width>
        <height>21</height>
       </rect>
      </property>
@@ -2085,7 +2085,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <enum>QFrame::Sunken</enum>
      </property>
      <property name="text">
-      <string>X轴</string>
+      <string>X轴/mm</string>
      </property>
     </widget>
     <widget class="QPushButton" name="PosReset">
