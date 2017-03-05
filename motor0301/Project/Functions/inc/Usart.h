@@ -1,0 +1,12 @@
+void USART3_Config(long int Baud);
+void USART2_Config(long int Baud);
+void USART3_Puts(char * data);
+void USART2_Puts(char * data);
+void USART3_Num(int data);
+void USART2_Num(int data);
+void USART3_Puts_it(char * data);
+void USART2_Puts_it(char * data);
+void USART3_Num_it(int data);
+void USART2_Num_it(int data);
+void USART1_Config(long int Baud);
+void USART1_Num(int data);

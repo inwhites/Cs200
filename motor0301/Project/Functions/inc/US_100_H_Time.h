@@ -1,0 +1,1 @@
+void US_100_H_Time_Calculate(void);

@@ -216,7 +216,7 @@ void MainWindow::loc_pos()
         int x_pos = QString::number(ui->SetX->text().toDouble()*100,'f',0).toInt();
         int y_pos = QString::number(ui->SetY->text().toDouble()*100,'f',0).toInt();
         int z_pos = QString::number(ui->SetZ->text().toDouble()*100,'f',0).toInt();
-        if(x_pos>=0 && x_pos <=36000 &&y_pos >= 0 && y_pos <= 30000
+        if(x_pos>=0 && x_pos <=32000 &&y_pos >= 0 && y_pos <= 28000
                 && z_pos >=0 &&z_pos <= 20000){
 
             Xpulse_cnt = (x_pos-x_coor)*10;

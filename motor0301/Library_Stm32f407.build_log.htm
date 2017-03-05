@@ -1,0 +1,1345 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.21.1.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: SEU SEU, SEY, LIC=76FX7-E09RQ-WEQH7-EIF0E-19VM9-UDGGV
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.21a
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 3 (build 300)
+Assembler:       Armasm.exe V5.06 update 3 (build 300)
+Linker/Locator:  ArmLink.exe V5.06 update 3 (build 300)
+Library Manager: ArmAr.exe V5.06 update 3 (build 300)
+Hex Converter:   FromElf.exe V5.06 update 3 (build 300)
+CPU DLL:         SARMCM3.DLL V5.21a
+Dialog DLL:      DCM.DLL V1.13.8.0
+Target DLL:      Segger\JL2CM3.dll V2.99.23.0
+Dialog DLL:      TCM.DLL V1.14.14.0
+ 
+<h2>Project:</h2>
+C:\Users\inwhites\Desktop\motor0301\Library_Stm32f407.uvprojx
+Project File Date:  03/05/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Library_Stm32f407'
+compiling main.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\main.c(13): warning:  #177-D: variable "GPIO_InitStructure" was declared but never referenced
+  	GPIO_InitTypeDef GPIO_InitStructure; 
+Project\main.c(15): warning:  #550-D: variable "sysclk_frequency" was set but never used
+  	uint32_t sysclk_frequency;      /*!<  SYSCLK clock frequency expressed in Hz */
+Project\main.c(16): warning:  #550-D: variable "hclk_frequency" was set but never used
+    uint32_t hclk_frequency;        /*!<  HCLK clock frequency expressed in Hz */
+Project\main.c(17): warning:  #550-D: variable "pclk1_frequency" was set but never used
+    uint32_t pclk1_frequency;       /*!<  PCLK1 clock frequency expressed in Hz */
+Project\main.c(18): warning:  #550-D: variable "pclk2_frequency" was set but never used
+    uint32_t pclk2_frequency;       /*!<  PCLK2 clock frequency expressed in Hz */ 
+Project\main.c(19): warning:  #550-D: variable "sysclk_source" was set but never used
+    uint8_t sysclk_source ;         //whitesnark sysclk
+Project\main.c(21): warning:  #177-D: variable "Systick_Relode_Val" was declared but never referenced
+    uint32_t Systick_Relode_Val = 0 ; // whitesnark systick 	
+Project\main.c(22): warning:  #177-D: variable "NVIC_InitTypeDef_inst" was declared but never referenced
+  	NVIC_InitTypeDef NVIC_InitTypeDef_inst;
+Project\main.c: 43 warnings, 0 errors
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_it.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\stm32f4xx_it.c: 35 warnings, 0 errors
+compiling misc.c...
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_can.c...
+compiling stm32f4xx_crc.c...
+compiling stm32f4xx_cryp.c...
+compiling stm32f4xx_cryp_aes.c...
+compiling stm32f4xx_cryp_des.c...
+compiling stm32f4xx_cryp_tdes.c...
+compiling stm32f4xx_dac.c...
+compiling stm32f4xx_dbgmcu.c...
+compiling stm32f4xx_dcmi.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_fsmc.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_hash.c...
+compiling stm32f4xx_hash_md5.c...
+compiling stm32f4xx_hash_sha1.c...
+compiling stm32f4xx_i2c.c...
+compiling stm32f4xx_iwdg.c...
+compiling stm32f4xx_pwr.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_rng.c...
+compiling stm32f4xx_rtc.c...
+compiling stm32f4xx_spi.c...
+compiling stm32f4xx_sdio.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_tim.c...
+compiling stm32f4xx_wwdg.c...
+assembling startup_stm32f4xx.s...
+compiling Delay.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\Delay.c(40): warning:  #1-D: last line of file ends without a newline
+  }
+Project\Functions\src\Delay.c: 36 warnings, 0 errors
+compiling LED.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\LED.c(35): warning:  #1-D: last line of file ends without a newline
+  }
+Project\Functions\src\LED.c: 36 warnings, 0 errors
+compiling Usart.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\Usart.c(207): warning:  #1-D: last line of file ends without a newline
+  }
+Project\Functions\src\Usart.c: 36 warnings, 0 errors
+compiling Key_4x4.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\Key_4x4.c(163): warning:  #1-D: last line of file ends without a newline
+  	
+Project\Functions\src\Key_4x4.c: 36 warnings, 0 errors
+compiling PWM.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\PWM.c(86): warning:  #1-D: last line of file ends without a newline
+  }
+Project\Functions\src\PWM.c: 36 warnings, 0 errors
+compiling US_100.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\US_100.c(74): warning:  #1-D: last line of file ends without a newline
+  }
+Project\Functions\src\US_100.c: 36 warnings, 0 errors
+compiling EXIT.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\EXIT.c(64): warning:  #1-D: last line of file ends without a newline
+  }
+Project\Functions\src\EXIT.c: 36 warnings, 0 errors
+compiling TIM.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\TIM.c(25): warning:  #1-D: last line of file ends without a newline
+  }
+Project\Functions\src\TIM.c: 36 warnings, 0 errors
+compiling List_LCD.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\List_LCD.c: 35 warnings, 0 errors
+compiling LCD.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\LCD.c: 35 warnings, 0 errors
+compiling LCD_Functions.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\LCD_Functions.c(91): warning:  #223-D: function "LCD_DrawChinaChar" declared implicitly
+  		LCD_DrawChinaChar(Line, num*24+40, (uint8_t *)Example[num]);
+Project\Functions\src\LCD_Functions.c(159): warning:  #1-D: last line of file ends without a newline
+  }
+Project\Functions\src\LCD_Functions.c: 37 warnings, 0 errors
+compiling IIC.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\IIC.c: 35 warnings, 0 errors
+compiling Test_Functions.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\Test_Functions.c(606): warning:  #1-D: last line of file ends without a newline
+  }
+Project\Functions\src\Test_Functions.c: 36 warnings, 0 errors
+compiling Calculate_H_Time.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\Calculate_H_Time.c: 35 warnings, 0 errors
+compiling US_100_H_Time.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\LED.h(2): warning:  #1-D: last line of file ends without a newline
+  void Led_GPIO_Config(void);
+.\Project\Functions\inc\Usart.h(12): warning:  #1-D: last line of file ends without a newline
+  void USART1_Num(int data);
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1-D: last line of file ends without a newline
+  void Display_Data();
+.\Project\Functions\inc\MPU6050_RMB200.h(7): warning:  #1295-D: Deprecated declaration Display_Data - give arg types
+  void Display_Data();
+.\Project\Functions\inc\Key_4x4.h(2): warning:  #1-D: last line of file ends without a newline
+  int Key_Display(void);
+.\Project\Functions\inc\PWM.h(2): warning:  #1-D: last line of file ends without a newline
+  void PWM_PA8(int Pulse);
+.\Project\Functions\inc\US_100.h(3): warning:  #1-D: last line of file ends without a newline
+  void US_100_GPIO_Config_H_Time(void);
+.\Project\Functions\inc\DHT11.h(1): warning:  #1-D: last line of file ends without a newline
+  void DHT11_Data(void);
+.\Project\Functions\inc\Step_Motor.h(2): warning:  #1-D: last line of file ends without a newline
+  void  One_Motor_Run(unsigned int n);
+.\Project\Functions\inc\EXIT.h(1): warning:  #1-D: last line of file ends without a newline
+  void EXIT(void);
+.\Project\Functions\inc\TIM.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM3_Int_Init(u16 Arr,u16 Psc);
+.\Project\Functions\inc\DC_Motor_PID.h(1): warning:  #1-D: last line of file ends without a newline
+  int Speed_Calculate(float Set_angle);
+.\Project\Functions\inc\Steering_Engine_PD.h(1): warning:  #1-D: last line of file ends without a newline
+  int Steering_Engine(void);
+.\Project\Functions\inc\LCD_Functions.h(2): warning:  #1295-D: Deprecated declaration Display_En_Example - give arg types
+  void Display_En_Example();
+.\Project\Functions\inc\LCD_Functions.h(3): warning:  #1295-D: Deprecated declaration Display_Point_float - give arg types
+  void Display_Point_float();
+.\Project\Functions\inc\LCD_Functions.h(4): warning:  #1295-D: Deprecated declaration Display_Point_float2 - give arg types
+  void Display_Point_float2();
+.\Project\Functions\inc\LCD_Functions.h(7): warning:  #1295-D: Deprecated declaration Display_Yaw - give arg types
+  void Display_Yaw();
+.\Project\Functions\inc\LCD_Functions.h(8): warning:  #1295-D: Deprecated declaration Display_Pitch - give arg types
+  void Display_Pitch();
+.\Project\Functions\inc\LCD_Functions.h(9): warning:  #1295-D: Deprecated declaration Display_Roll - give arg types
+  void Display_Roll();
+.\Project\Functions\inc\LCD_Functions.h(10): warning:  #1295-D: Deprecated declaration Display_Alt - give arg types
+  void Display_Alt();
+.\Project\Functions\inc\LCD_Functions.h(11): warning:  #1295-D: Deprecated declaration Display_Tempr - give arg types
+  void Display_Tempr();
+.\Project\Functions\inc\LCD_Functions.h(12): warning:  #1295-D: Deprecated declaration Display_Press - give arg types
+  void Display_Press();
+.\Project\Functions\inc\LCD_Functions.h(13): warning:  #1295-D: Deprecated declaration Display_Yaw_F - give arg types
+  void Display_Yaw_F();
+.\Project\Functions\inc\LCD_Functions.h(14): warning:  #1295-D: Deprecated declaration Display_Pitch_F - give arg types
+  void Display_Pitch_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1-D: last line of file ends without a newline
+  void Display_Roll_F();
+.\Project\Functions\inc\LCD_Functions.h(15): warning:  #1295-D: Deprecated declaration Display_Roll_F - give arg types
+  void Display_Roll_F();
+.\Project\Functions\inc\OV7670_Functions.h(1): warning:  #1-D: last line of file ends without a newline
+  void Display_OV7670(void);
+.\Project\Functions\inc\Calculate_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void TIM5_CH1_Cap_Init(u32 arr,u16 psc);
+.\Project\Functions\inc\US_100_H_Time.h(1): warning:  #1-D: last line of file ends without a newline
+  void US_100_H_Time_Calculate(void);
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\NRF24L01.h(17): warning:  #47-D: incompatible redefinition of macro "CONFIG" (declared at line 4 of ".\Project\Functions\inc\MPU6050_RMB60.h")
+  #define CONFIG          0x00  //???眉拇??鞯?址;bit0:1????模式,0发??模式;bit1:??选??;bit2:CRC模式;bit3:CRC使??;
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+.\Project\Functions\inc\Include.h(34): warning:  #1-D: last line of file ends without a newline
+  #include "App_ov7670.h"
+Project\Functions\src\US_100_H_Time.c(11): warning:  #1-D: last line of file ends without a newline
+  }
+Project\Functions\src\US_100_H_Time.c: 36 warnings, 0 errors
+compiling NRF24L01.c...
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+Project\Functions\src\NRF24L01.c: 2 warnings, 0 errors
+compiling NRF24L01_module2.c...
+compiling spi.c...
+.\Project\Functions\inc\spi.h(59): warning:  #1295-D: Deprecated declaration optical_init - give arg types
+  void optical_init();
+.\Project\Functions\inc\spi.h(60): warning:  #1295-D: Deprecated declaration optical_pixel - give arg types
+  int optical_pixel();
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+Project\Functions\src\spi.c: 3 warnings, 0 errors
+compiling spi1.c...
+compiling st7735r.c...
+.\Project\Functions\inc\Delay.h(5): warning:  #1-D: last line of file ends without a newline
+  void Delay_Us(__IO uint32_t nTime);
+Project\Functions\src\st7735r.c: 1 warning, 0 errors
+linking...
+Program Size: Code=24220 RO-data=18088 RW-data=244 ZI-data=1644  
+".\Library_Stm32f407.axf" - 0 Error(s), 614 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\inwhites\Desktop\motor0301\RTE
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:59
+</pre>
+</body>
+</html>

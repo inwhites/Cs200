@@ -1979,7 +1979,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <string notr="true">background-color: rgb(80, 118, 255);</string>
      </property>
      <property name="maximum">
-      <number>30000</number>
+      <number>28000</number>
      </property>
      <property name="singleStep">
       <number>1</number>
@@ -2054,7 +2054,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <string notr="true">background-color: rgb(80, 118, 255);</string>
      </property>
      <property name="maximum">
-      <number>36000</number>
+      <number>32000</number>
      </property>
      <property name="singleStep">
       <number>1</number>

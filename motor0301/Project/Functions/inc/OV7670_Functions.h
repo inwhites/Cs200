@@ -1,0 +1,1 @@
+void Display_OV7670(void);
